@@ -180,6 +180,7 @@ Prepare the deliverables the director of marketing was asking for, including the
 **Final conclusion**
 
 **Top 3 recommendations** : 
+
 1.
 
 2.
