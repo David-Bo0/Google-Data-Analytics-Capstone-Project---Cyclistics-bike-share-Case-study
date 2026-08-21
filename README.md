@@ -5,7 +5,7 @@ This repository houses the final capstone project for the "Google Data Analytics
 
 **Key Highlights:**
 - **Dashboard**: Explore the interactive visualization created in Tableau, providing clear insights derived from complex data analyses.
--  [View Dashboard](https://public.tableau.com/shared/27X7YYZ5X?:display_count=n&:origin=viz_share_link)
+-  [View Dashboard](https://public.tableau.com/views/Cyclistics_bike_share_visualizations/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 **Table of Contents**
 
