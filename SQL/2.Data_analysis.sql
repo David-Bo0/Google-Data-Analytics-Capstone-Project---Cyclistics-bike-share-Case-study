@@ -67,18 +67,23 @@ ORDER BY route_trip_count DESC;
 
 -- create a new table to sum up all the top routes which consists of member types, start station name, end station name, route trip count, and average route duration so creating viz in tableau would be easier.
 
-CREATE TABLE summary_usage_by_time AS
-SELECT 
+select 
 member_casual,
-month_name,
+month_name ,
 day_of_week,
-HOUR(started_at) AS start_hour,
-COUNT(*) AS total_trips,
-ROUND(AVG(ride_length_seconds) / 60, 2) AS avg_ride_length
-FROM cleaned_year_trips
-GROUP BY member_casual, month_name, day_of_week, HOUR(started_at)
-ORDER BY FIELD(month_name, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-FIELD(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'),
-start_hour;
+hour(started_at) AS start_hour,
+count(*) as total_trip,
+round(AVG(ride_length_seconds) / 60 , 2) AS avg_ride_length
+ from `cleaned_year_trips`
+ GROUP BY 
+ member_casual,
+ month_name,
+ day_of_week,
+ hour(started_at)
+ ORDER BY 
+member_casual,
+field(month_name, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ),
+field(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'),
+start_hour
 
 -- create another table to summarize the duration of rides by months and days.
